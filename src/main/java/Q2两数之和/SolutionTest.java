@@ -15,7 +15,7 @@ public class SolutionTest {
     public void test1() {
         ListNode nodeA = new ListNode(0);
         ListNode nodeB = new ListNode(0);
-        Solution solution = new Solution();
+        Solution1 solution = new Solution1();
         ListNode listNode = solution.addTwoNumbers(nodeA, nodeB);
         System.out.println(listNode);
     }
@@ -32,7 +32,7 @@ public class SolutionTest {
         ListNode nodeC = new ListNode(4);
         nodeA.next = nodeB;
         nodeB.next = nodeC;
-        Solution solution = new Solution();
+        Solution1 solution = new Solution1();
         ListNode listNode = solution.addTwoNumbers(node1, nodeA);
         System.out.println(listNode);
     }
@@ -59,7 +59,7 @@ public class SolutionTest {
         nodeA.next = nodeB;
         nodeB.next = nodeC;
         nodeC.next = nodeD;
-        Solution solution = new Solution();
+        Solution1 solution = new Solution1();
         ListNode listNode = solution.addTwoNumbers(node1, nodeA);
         System.out.println(listNode);
     }
@@ -86,7 +86,7 @@ public class SolutionTest {
         nodeA.next = nodeB;
         nodeB.next = nodeC;
         nodeC.next = nodeD;
-        Solution solution = new Solution();
+        Solution1 solution = new Solution1();
         ListNode listNode = solution.addTwoNumbers(nodeA, node1);
         System.out.println(listNode);
     }
