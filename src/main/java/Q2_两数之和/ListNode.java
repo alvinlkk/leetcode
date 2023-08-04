@@ -1,4 +1,4 @@
-package Q2两数之和;
+package Q2_两数之和;
 
 /**
  * <p>描 述：</p>
@@ -15,6 +15,10 @@ public class ListNode {
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
 // https://leetcode.cn/problems/add-two-numbers/solutions/2327008/dong-hua-jian-ji-xie-fa-cong-di-gui-dao-oe0di/
+
+/**
+ * 思路： 递归
+ */
 class Solution1 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         return recAddTwo(l1, l2, 0);
