@@ -1,6 +1,4 @@
-package Q2_两数之和;
-
-import java.util.Arrays;
+package leetcode.Q2_两数之和;
 
 import org.junit.jupiter.api.Test;
 

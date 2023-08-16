@@ -1,4 +1,4 @@
-package Q2_两数之和;
+package leetcode.Q2_两数之和;
 
 /**
  * <p>描 述：</p>
