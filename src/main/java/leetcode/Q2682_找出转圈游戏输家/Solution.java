@@ -22,6 +22,34 @@ package leetcode.Q2682_找出转圈游戏输家;
  */
 public class Solution {
     public int[] circularGameLosers(int n, int k) {
-        return null;
+        boolean[] arr = new boolean[n];
+
+        int turns = 1;
+        int ballPos = 0;
+        while (true) {
+            arr[ballPos] = true;
+            ballPos = (ballPos + turns * k) % n;
+            if(arr[ballPos]) {
+                break;
+            }
+            turns ++;
+        }
+
+        int failCount = 0;
+        for(int i=0; i<n; i++) {
+            if(!arr[i]) {
+                failCount ++;
+            }
+        }
+        int[] resArr = new int[failCount];
+        int index = 0;
+        for(int i=0; i<n; i++) {
+            if(!arr[i]) {
+                resArr[index] = i + 1;
+                index ++;
+            }
+        }
+
+        return resArr;
     }
 }
