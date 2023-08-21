@@ -15,13 +15,42 @@ package leetcode.Q2337_移动片段得到字符串;
 public class Solution {
     /**
      * 思路：
-     * start和target字符都进行挪动，挪动到不能挪为止，然后比较
+     * 双指针， i遍历start, j遍历target
+     * 1. 过滤掉 _ 字符
+     * 2. 当前字符是 L 且 i<j, i无法移动，返回false
+     * 3. 当前字符是 R,且 i>j, i无法移动，返回false
      *
      * @param start
      * @param target
      * @return
      */
     public boolean canChange(String start, String target) {
-        return false;
+        int i = 0, j = 0;
+        int len = start.length();
+        while (true) {
+            while (i < len && start.charAt(i) == '_') {
+                i++;
+            }
+            while (j < len && target.charAt(j) == '_') {
+                j++;
+            }
+            if (i == len && j == len) {
+                return true;
+            }
+
+            if (i == len || j == len || start.charAt(i) != target.charAt(j)) {
+                return false;
+            }
+
+            if(start.charAt(i) == 'L' && i < j) {
+                return false;
+            }
+
+            if(start.charAt(i) == 'R' && i > j) {
+                return false;
+            }
+            i++;
+            j++;
+        }
     }
 }
