@@ -1,4 +1,4 @@
-package leetcode.Q1869_哪种连续子字符串更长;
+package leetcode.Q2236_判断根结点是否等于子结点之和.Q1869_哪种连续子字符串更长;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
