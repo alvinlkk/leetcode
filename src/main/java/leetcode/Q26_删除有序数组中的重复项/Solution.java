@@ -24,6 +24,17 @@ public class Solution {
      * @return
      */
     public int removeDuplicates(int[] nums) {
-        return 0;
+        int len = nums.length;
+        int pre = nums[0];
+        int step = 0;
+        for(int i=1; i<len; i++) {
+            if(nums[i] == pre) {
+                step++;
+            } else {
+                nums[i-step] = nums[i];
+                pre = nums[i];
+            }
+        }
+        return len - step;
     }
 }
