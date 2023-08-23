@@ -24,6 +24,6 @@ public class Solution {
      * @return
      */
     public int removeDuplicates(int[] nums) {
-
+        return 0;
     }
 }
