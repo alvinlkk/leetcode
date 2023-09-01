@@ -1,4 +1,4 @@
-package leetcode.Q2_两数之和;
+package leetcode.Q2_两数先加;
 
 import org.junit.jupiter.api.Test;
 
