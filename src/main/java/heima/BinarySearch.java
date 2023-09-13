@@ -50,4 +50,21 @@ public class BinarySearch {
         }
         return -1;
     }
+
+    public static int binarySearchLeftmost1(int[] a, int target) {
+        int i = 0, j = a.length - 1;
+        int candidate = -1;
+        while (i <= j) {
+            int m = (i + j) >>> 1;
+            if (target < a[m]) {
+                j = m - 1;
+            } else if (a[m] < target) {
+                i = m + 1;
+            } else {
+                candidate = m; // 记录候选位置
+                j = m - 1;     // 继续向左
+            }
+        }
+        return candidate;
+    }
 }
