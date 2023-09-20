@@ -1,4 +1,4 @@
-package heima.recursion;
+package heima.recursion_single;
 
 /**
  * <p>描 述：</p>
@@ -8,7 +8,7 @@ package heima.recursion;
  * @version 1.0.0
  * @since 2023/9/19  20:33
  */
-public class ReversePrintString {
+public class E02ReversePrintString {
 
     public static void f(int n, String str) {
         if(n == str.length()) {
