@@ -16,10 +16,15 @@ package heima.recursion_single;
 public class E04BubbleSort {
 
     public static void sort(int[] a) {
-
+        bubble(a, a.length - 1);
     }
 
-
+    /**
+     * <h3>递归函数 在范围 [0 .. j] 内冒泡最大元素到右侧</h3>
+     *
+     * @param a 数组
+     * @param j 未排序区域右边界
+     */
     private static void bubble(int[] a, int j) {
         if (j == 0) {
             return;
@@ -27,13 +32,16 @@ public class E04BubbleSort {
 
         int x = 0;
         for (int i = 0; i < j; i++) {
+            // 如果前一个元素大于后一个
             if (a[i] > a[i + 1]) {
                 int temp = a[i + 1];
                 a[i + 1] = a[i];
                 a[i] = temp;
+
                 x = i;
             }
         }
+
         bubble(a, x);
     }
 }
