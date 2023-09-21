@@ -8,9 +8,9 @@ import java.util.List;
  * (1) 每次只能移动一个盘子;
  * (2) 盘子只能从柱子顶端滑出移到下一根柱子;
  * (3) 盘子只能叠在比它大的盘子上。
- *
+ * <p>
  * 请编写程序，用栈将所有盘子从第一根柱子移到最后一根柱子。
- *
+ * <p>
  * 你需要原地修改栈。
  *
  * @author cxw (332059317@qq.com)
@@ -20,22 +20,26 @@ import java.util.List;
 public class Solution {
 
     public void hanota(List<Integer> A, List<Integer> B, List<Integer> C) {
-
-
-
+        move(A.size(), A, B, C);
     }
 
     /**
      * 移动
+     *
      * @param n 数量
      * @param A 源柱子
      * @param B 中间柱子
      * @param C 目标柱子
      */
     private void move(int n, List<Integer> A, List<Integer> B, List<Integer> C) {
+        if (n == 0) {
+            return;
+        }
 
-
-        move(n -1, A, C, B);
-
+        // n-1个从A移动到B
+        move(n - 1, A, C, B);
+        // 第n个从A移动到C
+        C.add(A.remove(A.size() - 1));
+        move(n - 1, B, A, C);
     }
 }
