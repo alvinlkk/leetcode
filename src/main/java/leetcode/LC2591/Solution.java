@@ -26,15 +26,20 @@ public class Solution {
      * @return
      */
     public int distMoney(int money, int children) {
-        for (int i = money / 8; i >= 0; i--) {
-            int restMoney = money - i * 8;
-            int restChildren = children - i;
-            if(restMoney == 0) {
-                return i;
-            } else if(restMoney / restChildren > 0 && !(restMoney == 4 && restChildren == 1)) {
-                return i;
-            }
+        // 如果钱不够分，返回-1
+        if(money < children) {
+            return -1;
         }
-        return -1;
+
+        if(money > 8 * children) {
+            return children - 1;
+        }
+
+        if(money == 8 * children + 4) {
+            return children - 2;
+        }
+
+        // money - (x * 8) >= children - x
+        return (money - children) / 7;
     }
 }
