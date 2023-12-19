@@ -19,6 +19,6 @@ public class Solution {
      * @return
      */
     public int[] singleNumber(int[] nums) {
-
+        return null;
     }
 }
