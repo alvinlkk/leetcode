@@ -54,7 +54,7 @@ public class Solution2 {
             return deleteDuplicates2(p.next);
         } else {
             // 若我与next不重复，返回我，更新next
-            p.next = deleteDuplicates(p.next);
+            p.next = deleteDuplicates2(p.next);
             return p;
         }
     }
